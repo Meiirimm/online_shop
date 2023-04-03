@@ -1,0 +1,213 @@
+.search{
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    padding: 7px;
+}
+.search input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    /* margin-left: 15px; */
+}
+.search i{
+    margin: 0 10px;
+    font-size: 16px;
+    color: #777C82;
+}
+
+.nav-left img{
+    width: 70%;
+}
+
+.nav-left{
+    position: relative;
+}
+
+.two{
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -3px;
+    right: 11px;
+    background-color: #FA00FF;
+    border-radius: 100%;
+    font-size: 12px;
+}
+
+.title h3{
+    font-weight: 500;
+    font-size: 32px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.tit-btn{
+    background-color: #FE6769;
+    border-radius: 13px;
+    padding: 7px 10px;
+    color: white;
+    transition: .4s;
+}
+
+.tit-btn button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.tit-btn:hover{
+    background-color: #FD0000;
+}
+
+.card{
+    background-color: #EDEDED;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-body h5{
+    color: #203530;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sale{
+    background-color: #FE6769;
+    border-radius: 5px;
+    position: absolute;
+    color: white;
+    padding: 0 5px;
+    top: 20px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.heart{
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    font-size: 25px;
+}
+
+.menu{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 25px;
+}
+
+.ell{
+    background-color: #FE6769;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -7%;
+    right: 40%;
+    font-size: 25px;
+    color: white;
+}
+
+.open-menu{
+    display: block !important;
+}
+
+#burger-menu{
+    position: absolute;
+    top: 95%;
+    background-color: #fff;
+    right: 15px;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 75%);
+    z-index: 10;
+    display: none;
+}
+
+.burger-menu-item{
+    padding: 5px 30px;
+    transition: .4s;
+
+}
+
+.burger-menu-item a{
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.burger-menu-item:hover{
+    background-color: #FE6769;
+}
+
+.burger-menu-item:hover a{
+    color: white;
+}
+
+.edit-container{
+    width: 40%;
+    margin: 30px 50px;
+}
+
+.edit-container h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.add input{
+    margin-bottom: 20px;
+    border-color: #000;
+}
+
+.add input::placeholder{
+    color: rgba(0, 0, 0, 0.32);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.add-btn{
+    width: 100%;
+    background: #FE6769;
+    border-radius: 11px;
+    border-color: #FE6769;  
+    transition: .4s;  
+}
+
+.add-btn:hover{
+    background-color: #FD0000;
+    border-color: #FD0000;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #6C757D;
+}
+
+.burger-menu-item button{
+    border: none;
+    background-color: transparent;
+    transition: .4s;
+}
+
+.burger-menu-item:hover button{
+    color: white;
+}

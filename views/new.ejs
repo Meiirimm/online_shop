@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light p-3">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item" aria-current="page"><a href="/">Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/new">New Product</a></li>
+        </ol>
+    </nav>
+    <div class="container edit-container">
+        <h2>Добавить товар</h2>
+        <form action="/new" method="POST">
+            <div class="mb-3 add">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Название продукта" name="title">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Цена" name="price">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Скидка" name="sale">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="URL картинки">
+            </div>
+            <button class="btn btn-primary add-btn" type="submit">Добавить продукт</button>    
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/0869a7851e.js" crossorigin="anonymous"></script>
+</body>
+</html>

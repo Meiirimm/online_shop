@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-light p-3">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item" aria-current="page"><a href="/">Products</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/edit">Edit Product</a></li>
+        </ol>
+    </nav>
+    <div class="container edit-container">
+        <h2>Редактировать товара</h2>
+        <form action="/edit" method="POST">
+            <input type="hidden" name="id" value="<%=data.id%>">
+            <div class="mb-3 add">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Название продукта" value="<%=data.title%>" name="title">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Цена" value="<%=data.price%>" name="price">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Скидка" value="<%=data.sale%>" name="sale">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="URL картинки" >
+            </div>
+            <button class="btn btn-primary add-btn" type="submit">Сохранить изменения</button>    
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/0869a7851e.js" crossorigin="anonymous"></script>
+</body>
+</html>
