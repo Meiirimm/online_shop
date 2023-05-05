@@ -22,7 +22,7 @@
         </div>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <%
-              data.forEach(item => {
+              data.forEach((item , index) => {
           %>
           <div class="col">
             <div class="card p-5">
@@ -33,9 +33,9 @@
               </div>
               <div class="sale"><%=item.sale%></div>
               <div class="heart"><i class="fa-regular fa-heart"></i></div>
-              <div class="menu" onclick="chageBurgerMenu(this)"><i class="fa-solid fa-ellipsis"></i></div>
+              <div class="menu" onclick="chageBurgerMenu('<%=index%>')"><i class="fa-solid fa-ellipsis"></i></div>
               <div class="ell"><i class="fa-solid fa-plus"></i></div>
-              <div id="burger-menu">
+              <div class="burger-menu" >
                 <div class="burger-menu-item"><a href="/edit/<%=item._id%>">Редактировать</a></div>
                 <div class="burger-menu-item"><button onclick="deleteItem('<%=item._id%>')">Удалить</button></div>
               </div>
@@ -46,71 +46,13 @@
 
               })
           %>
-            <!-- <div class="col">
-              <div class="card p-5">
-                <img src="/style/images/cheir.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Modern Cheir</h5>
-                  <h5 class="card-text">250$</h5>
-                </div>
-                <div class="sale">25%</div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
-                <div class="menu" onclick="chageBurgerMenu(this)"><i class="fa-solid fa-ellipsis"></i></div>
-                <div class="ell"><i class="fa-solid fa-plus"></i></div>
-                <div id="burger-menu">
-                  <div class="burger-menu-item"><a href="/edit">Редактировать</a></div>
-                  <div class="burger-menu-item"><a href="">Удалить</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card p-5">
-                <img src="/style/images/cheir.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Modern Cheir</h5>
-                  <h5 class="card-text">250$</h5>
-                </div>
-                <div class="sale">25%</div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
-                <div class="menu" onclick="chageBurgerMenu(this)"><i class="fa-solid fa-ellipsis"></i></div>
-                <div class="ell"><i class="fa-solid fa-plus"></i></div>
-               
-              </div>
-            </div>
-            <div class="col">
-              <div class="card p-5">
-                <img src="/style/images/cheir.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Modern Cheir</h5>
-                  <h5 class="card-text">250$</h5>
-                </div>
-                <div class="sale">25%</div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
-                <div class="menu" onclick="chageBurgerMenu(this)"><i class="fa-solid fa-ellipsis"></i></div>
-                <div class="ell"><i class="fa-solid fa-plus"></i></div>
-                
-              </div>
-            </div>
-            <div class="col">
-              <div class="card p-5">
-                <img src="/style/images/cheir.svg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Modern Cheir</h5>
-                  <h5 class="card-text">250$</h5>
-                </div>
-                <div class="sale">25%</div>
-                <div class="heart"><i class="fa-regular fa-heart"></i></div>
-                <div class="menu" onclick="chageBurgerMenu(this)"><i class="fa-solid fa-ellipsis"></i></div>
-                <div class="ell"><i class="fa-solid fa-plus"></i></div>
-                
-              </div>
-            </div> -->
         </div>
     </div>
     <script>
-      let menu = document.getElementById('burger-menu')
-      function chageBurgerMenu(){
-        menu.classList.toggle('open-menu')
+      let menu = document.getElementsByClassName('burger-menu')
+      function chageBurgerMenu(index){
+        console.log(index);
+        menu[index].classList.toggle('open-menu')
       }
     </script>
     <script src="https://kit.fontawesome.com/0869a7851e.js" crossorigin="anonymous"></script>
